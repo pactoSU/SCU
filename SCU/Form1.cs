@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,16 +53,61 @@ namespace SCU
 
         private void echo_Click(object sender, EventArgs e)
         {
+            string echoExe = "echoscu.exe";
+            string filePath = binariesPath.Text + "\\" +echoExe;
+            string parameters = hostName.Text + portNumber.Text;
 
+            MessageBox.Show(filePath + parameters);
+            var echoProcess = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = filePath,
+                    Arguments = parameters,
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    CreateNoWindow = true
+                }
+            };
+            try
+            {
+                echoProcess.Start();
+                string output = echoProcess.StandardOutput.ReadToEnd();
+                outputWindow.Text = output;
+                MessageBox.Show(output);
+                echoProcess.WaitForExit();
 
+          /*      while (!echoProcess.StandardOutput.EndOfStream)
+                {
+                    string line = echoProcess.StandardOutput.ReadLine();
+                    outputWindow.Text += line;
+                    MessageBox.Show("Print");
+                }*/
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
 
-
+            }
 
         }
 
         private void send_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void binariesPathButton_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
+            DialogResult result = folderBrowser.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                string folderName = folderBrowser.SelectedPath;
+                binariesPath.Text = folderName;
+                
+            }
         }
 
     }

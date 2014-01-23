@@ -38,12 +38,15 @@
             this.portNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.binariesPathButton = new System.Windows.Forms.Button();
+            this.binariesPath = new System.Windows.Forms.TextBox();
+            this.outputWindow = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // echo
             // 
-            this.echo.Location = new System.Drawing.Point(3, 98);
+            this.echo.Location = new System.Drawing.Point(3, 107);
             this.echo.Name = "echo";
             this.echo.Size = new System.Drawing.Size(75, 23);
             this.echo.TabIndex = 0;
@@ -53,7 +56,7 @@
             // 
             // send
             // 
-            this.send.Location = new System.Drawing.Point(143, 98);
+            this.send.Location = new System.Drawing.Point(143, 107);
             this.send.Name = "send";
             this.send.Size = new System.Drawing.Size(75, 23);
             this.send.TabIndex = 1;
@@ -63,23 +66,22 @@
             // 
             // selectFileDialog
             // 
-            this.selectFileDialog.Location = new System.Drawing.Point(143, 3);
+            this.selectFileDialog.Location = new System.Drawing.Point(143, 31);
             this.selectFileDialog.Name = "selectFileDialog";
-            this.selectFileDialog.ReadOnly = true;
             this.selectFileDialog.Size = new System.Drawing.Size(302, 20);
             this.selectFileDialog.TabIndex = 2;
             this.selectFileDialog.TextChanged += new System.EventHandler(this.selectFileDialog_TextChanged);
             // 
             // hostName
             // 
-            this.hostName.Location = new System.Drawing.Point(143, 47);
+            this.hostName.Location = new System.Drawing.Point(143, 64);
             this.hostName.Name = "hostName";
             this.hostName.Size = new System.Drawing.Size(173, 20);
             this.hostName.TabIndex = 3;
             // 
             // selectFileButton
             // 
-            this.selectFileButton.Location = new System.Drawing.Point(3, 3);
+            this.selectFileButton.Location = new System.Drawing.Point(3, 31);
             this.selectFileButton.Name = "selectFileButton";
             this.selectFileButton.Size = new System.Drawing.Size(75, 23);
             this.selectFileButton.TabIndex = 4;
@@ -94,7 +96,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 70);
+            this.label1.Location = new System.Drawing.Point(3, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 5;
@@ -102,7 +104,7 @@
             // 
             // portNumber
             // 
-            this.portNumber.Location = new System.Drawing.Point(143, 73);
+            this.portNumber.Location = new System.Drawing.Point(143, 89);
             this.portNumber.Name = "portNumber";
             this.portNumber.Size = new System.Drawing.Size(173, 20);
             this.portNumber.TabIndex = 6;
@@ -110,7 +112,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 44);
+            this.label2.Location = new System.Drawing.Point(3, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 7;
@@ -122,29 +124,60 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.75F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.send, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.selectFileDialog, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.echo, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.selectFileButton, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.portNumber, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.hostName, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.send, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.selectFileDialog, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.echo, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.selectFileButton, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.portNumber, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.hostName, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.binariesPathButton, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.binariesPath, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.85714F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.14286F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 121F));
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(458, 217);
             this.tableLayoutPanel1.TabIndex = 8;
+            // 
+            // binariesPathButton
+            // 
+            this.binariesPathButton.Location = new System.Drawing.Point(3, 3);
+            this.binariesPathButton.Name = "binariesPathButton";
+            this.binariesPathButton.Size = new System.Drawing.Size(116, 22);
+            this.binariesPathButton.TabIndex = 8;
+            this.binariesPathButton.Text = "Select Binaries Path";
+            this.binariesPathButton.UseVisualStyleBackColor = true;
+            this.binariesPathButton.Click += new System.EventHandler(this.binariesPathButton_Click);
+            // 
+            // binariesPath
+            // 
+            this.binariesPath.Location = new System.Drawing.Point(143, 3);
+            this.binariesPath.Name = "binariesPath";
+            this.binariesPath.Size = new System.Drawing.Size(302, 20);
+            this.binariesPath.TabIndex = 9;
+            this.binariesPath.Text = "Select path for DCMTK Binaries";
+            // 
+            // outputWindow
+            // 
+            this.outputWindow.Location = new System.Drawing.Point(6, 228);
+            this.outputWindow.Multiline = true;
+            this.outputWindow.Name = "outputWindow";
+            this.outputWindow.ReadOnly = true;
+            this.outputWindow.Size = new System.Drawing.Size(445, 89);
+            this.outputWindow.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 329);
+            this.Controls.Add(this.outputWindow);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -152,6 +185,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,6 +201,9 @@
         private System.Windows.Forms.TextBox portNumber;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button binariesPathButton;
+        private System.Windows.Forms.TextBox binariesPath;
+        private System.Windows.Forms.TextBox outputWindow;
     }
 }
 
