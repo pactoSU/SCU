@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace SCU
 {
-    public partial class Form1 : Form
+    public partial class SCU : Form
     {
-        public Form1()
+        public SCU()
         {
             InitializeComponent();
         }
@@ -66,23 +66,18 @@ namespace SCU
                     Arguments = parameters,
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
+                    RedirectStandardError = true,
                     CreateNoWindow = true
                 }
             };
             try
             {
                 echoProcess.Start();
-                string output = echoProcess.StandardOutput.ReadToEnd();
-                outputWindow.Text = output;
-                MessageBox.Show(output);
-                echoProcess.WaitForExit();
-
-          /*      while (!echoProcess.StandardOutput.EndOfStream)
+                while (!echoProcess.StandardOutput.EndOfStream)
                 {
                     string line = echoProcess.StandardOutput.ReadLine();
-                    outputWindow.Text += line;
-                    MessageBox.Show("Print");
-                }*/
+                    outputWindow.Text += line + Environment.NewLine;
+                }
             }
             catch(Exception ex)
             {

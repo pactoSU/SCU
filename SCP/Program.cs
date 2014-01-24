@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SCU
+namespace SCP
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace SCU
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SCU());
+            Application.Run(new SCP());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace SCU
 {
-    partial class Form1
+    partial class SCU
     {
         /// <summary>
         /// Required designer variable.
@@ -165,21 +165,22 @@
             // 
             // outputWindow
             // 
+            this.outputWindow.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.outputWindow.Location = new System.Drawing.Point(6, 228);
             this.outputWindow.Multiline = true;
             this.outputWindow.Name = "outputWindow";
-            this.outputWindow.ReadOnly = true;
+            this.outputWindow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.outputWindow.Size = new System.Drawing.Size(445, 89);
             this.outputWindow.TabIndex = 9;
             // 
-            // Form1
+            // SCU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 329);
             this.Controls.Add(this.outputWindow);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form1";
+            this.Name = "SCU";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

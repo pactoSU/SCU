@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC0FC26E-9CA3-4A43-ABE3-8F07C57905F1}</ProjectGuid>
+    <ProjectGuid>{A6CCA8A0-3B64-4D36-9652-DA9DF0102D44}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SCU</RootNamespace>
-    <AssemblyName>SCU</AssemblyName>
+    <RootNamespace>SCP</RootNamespace>
+    <AssemblyName>SCP</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,16 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SCU.cs">
+    <Compile Include="SCP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SCU.Designer.cs">
-      <DependentUpon>SCU.cs</DependentUpon>
+    <Compile Include="SCP.Designer.cs">
+      <DependentUpon>SCP.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="SCU.resx">
-      <DependentUpon>SCU.cs</DependentUpon>
+    <EmbeddedResource Include="SCP.resx">
+      <DependentUpon>SCP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
