@@ -74,7 +74,7 @@
             // 
             // hostName
             // 
-            this.hostName.Location = new System.Drawing.Point(143, 64);
+            this.hostName.Location = new System.Drawing.Point(143, 57);
             this.hostName.Name = "hostName";
             this.hostName.Size = new System.Drawing.Size(173, 20);
             this.hostName.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             this.selectFileButton.Location = new System.Drawing.Point(3, 31);
             this.selectFileButton.Name = "selectFileButton";
-            this.selectFileButton.Size = new System.Drawing.Size(75, 23);
+            this.selectFileButton.Size = new System.Drawing.Size(75, 20);
             this.selectFileButton.TabIndex = 4;
             this.selectFileButton.Text = "Select File";
             this.selectFileButton.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 86);
+            this.label1.Location = new System.Drawing.Point(3, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             // portNumber
             // 
-            this.portNumber.Location = new System.Drawing.Point(143, 89);
+            this.portNumber.Location = new System.Drawing.Point(143, 83);
             this.portNumber.Name = "portNumber";
             this.portNumber.Size = new System.Drawing.Size(173, 20);
             this.portNumber.TabIndex = 6;
@@ -112,7 +112,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 61);
+            this.label2.Location = new System.Drawing.Point(3, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 7;
@@ -124,23 +124,23 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.75F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.send, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.selectFileDialog, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.echo, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.selectFileButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.portNumber, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.hostName, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.binariesPathButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.binariesPath, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(458, 217);
             this.tableLayoutPanel1.TabIndex = 8;

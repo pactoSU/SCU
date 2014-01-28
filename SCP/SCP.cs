@@ -27,7 +27,7 @@ namespace SCP
         {
             string echoExe = "storescp.exe";
             string filePath = binariesPath.Text + "\\" + echoExe;
-            string parameters = portNumber.Text;
+            string parameters = "-od " +destinationText.Text + " " + portNumber.Text;
 
             MessageBox.Show(filePath + parameters);
             var echoProcess = new Process
@@ -67,6 +67,19 @@ namespace SCP
             {
                 string folderName = folderBrowser.SelectedPath;
                 binariesPath.Text = folderName;
+
+            }
+        }
+
+        private void destinationButton_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
+            DialogResult result = folderBrowser.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                string folderName = folderBrowser.SelectedPath;
+                destinationText.Text = folderName;
 
             }
         }

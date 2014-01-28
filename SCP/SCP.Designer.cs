@@ -34,11 +34,13 @@
             this.outputWindow = new System.Windows.Forms.TextBox();
             this.binariesPath = new System.Windows.Forms.TextBox();
             this.binariesPathButton = new System.Windows.Forms.Button();
+            this.destinationButton = new System.Windows.Forms.Button();
+            this.destinationText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // storeSCP
             // 
-            this.storeSCP.Location = new System.Drawing.Point(15, 78);
+            this.storeSCP.Location = new System.Drawing.Point(15, 107);
             this.storeSCP.Name = "storeSCP";
             this.storeSCP.Size = new System.Drawing.Size(75, 23);
             this.storeSCP.TabIndex = 0;
@@ -48,7 +50,7 @@
             // 
             // portNumber
             // 
-            this.portNumber.Location = new System.Drawing.Point(134, 49);
+            this.portNumber.Location = new System.Drawing.Point(134, 74);
             this.portNumber.Name = "portNumber";
             this.portNumber.Size = new System.Drawing.Size(204, 20);
             this.portNumber.TabIndex = 1;
@@ -56,7 +58,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 49);
+            this.label1.Location = new System.Drawing.Point(44, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 2;
@@ -65,11 +67,11 @@
             // 
             // outputWindow
             // 
-            this.outputWindow.Location = new System.Drawing.Point(15, 108);
+            this.outputWindow.Location = new System.Drawing.Point(15, 136);
             this.outputWindow.Multiline = true;
             this.outputWindow.Name = "outputWindow";
             this.outputWindow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputWindow.Size = new System.Drawing.Size(458, 196);
+            this.outputWindow.Size = new System.Drawing.Size(458, 168);
             this.outputWindow.TabIndex = 3;
             // 
             // binariesPath
@@ -90,11 +92,31 @@
             this.binariesPathButton.UseVisualStyleBackColor = true;
             this.binariesPathButton.Click += new System.EventHandler(this.binariesPathButton_Click);
             // 
+            // destinationButton
+            // 
+            this.destinationButton.Location = new System.Drawing.Point(12, 41);
+            this.destinationButton.Name = "destinationButton";
+            this.destinationButton.Size = new System.Drawing.Size(116, 22);
+            this.destinationButton.TabIndex = 12;
+            this.destinationButton.Text = "Select Destination";
+            this.destinationButton.UseVisualStyleBackColor = true;
+            this.destinationButton.Click += new System.EventHandler(this.destinationButton_Click);
+            // 
+            // destinationText
+            // 
+            this.destinationText.Location = new System.Drawing.Point(134, 43);
+            this.destinationText.Name = "destinationText";
+            this.destinationText.Size = new System.Drawing.Size(302, 20);
+            this.destinationText.TabIndex = 13;
+            this.destinationText.Text = "Select path for file destination";
+            // 
             // SCP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 316);
+            this.Controls.Add(this.destinationText);
+            this.Controls.Add(this.destinationButton);
             this.Controls.Add(this.binariesPathButton);
             this.Controls.Add(this.binariesPath);
             this.Controls.Add(this.outputWindow);
@@ -116,6 +138,8 @@
         private System.Windows.Forms.TextBox outputWindow;
         private System.Windows.Forms.TextBox binariesPath;
         private System.Windows.Forms.Button binariesPathButton;
+        private System.Windows.Forms.Button destinationButton;
+        private System.Windows.Forms.TextBox destinationText;
     }
 }
 
