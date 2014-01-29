@@ -41,10 +41,6 @@ namespace SCU
                 }
             }
         }
-        private void selectFileDialog_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -144,6 +140,154 @@ namespace SCU
                 
             }
         }
+
+        private void binariesPath_TextChanged(object sender, EventArgs e)
+        {
+            bool fileSelected, hostNameInputted, portNumberInputted;
+            if (hostName.Text == "")
+                hostNameInputted = false;
+            else
+                hostNameInputted = true;
+
+            if (selectFileDialog.Text == "")
+                fileSelected = false;
+            else
+                fileSelected = true;
+
+            if (portNumber.Text == "")
+                portNumberInputted = false;
+            else
+                portNumberInputted = true;
+
+            if (fileSelected && hostNameInputted && portNumberInputted){
+
+                echo.Enabled = true;
+                echo.Visible = true;
+                send.Enabled = true;
+                send.Visible = true;
+            }
+            else
+            {
+                echo.Enabled = false;
+                echo.Visible = false;
+                send.Enabled = false;
+                send.Visible = false;
+
+            }   
+        }
+
+
+
+        private void selectFileDialog_TextChanged(object sender, EventArgs e)
+        {
+            bool binariesPathSelected, hostNameInputted, portNumberInputted;
+
+            if (hostName.Text == "")
+                hostNameInputted = false;
+            else
+                hostNameInputted = true;
+
+            if (binariesPath.Text == "")
+                binariesPathSelected = false;
+            else
+                binariesPathSelected = true;
+
+            if (portNumber.Text == "")
+                portNumberInputted = false;
+            else
+                portNumberInputted = true;
+
+            if (binariesPathSelected && hostNameInputted && portNumberInputted)
+            {
+
+                echo.Enabled = true;
+                echo.Visible = true;
+                send.Enabled = true;
+                send.Visible = true;
+            }
+            else
+            {
+                echo.Enabled = false;
+                echo.Visible = false;
+                send.Enabled = false;
+                send.Visible = false;
+
+            } 
+        }
+
+        private void hostName_TextChanged(object sender, EventArgs e)
+        {
+            bool fileSelected, binariesPathSelected, portNumberInputted;
+
+            if (binariesPath.Text == "")
+                binariesPathSelected = false;
+            else
+                binariesPathSelected = true;
+
+            if (selectFileDialog.Text == "")
+                fileSelected = false;
+            else
+                fileSelected = true;
+
+            if (portNumber.Text == "")
+                portNumberInputted = false;
+            else
+                portNumberInputted = true;
+
+            if (fileSelected && binariesPathSelected && portNumberInputted)
+            {
+
+                echo.Enabled = true;
+                echo.Visible = true;
+                send.Enabled = true;
+                send.Visible = true;
+            }
+            else
+            {
+                echo.Enabled = false;
+                echo.Visible = false;
+                send.Enabled = false;
+                send.Visible = false;
+
+            } 
+        }
+
+        private void portNumber_TextChanged(object sender, EventArgs e)
+        {
+            bool fileSelected, hostNameInputted, binariesPathSelected;
+
+            if (hostName.Text == "")
+                hostNameInputted = false;
+            else
+                hostNameInputted = true;
+
+            if (selectFileDialog.Text == "")
+                fileSelected = false;
+            else
+                fileSelected = true;
+
+            if (binariesPath.Text == "")
+                binariesPathSelected = false;
+            else
+                binariesPathSelected = true;
+
+            if (fileSelected && hostNameInputted && binariesPathSelected)
+            {
+                echo.Enabled = true;
+                echo.Visible = true;
+                send.Enabled = true;
+                send.Visible = true;
+            }
+            else
+            {
+                echo.Enabled = false;
+                echo.Visible = false;
+                send.Enabled = false;
+                send.Visible = false;
+
+            }
+        }
+
 
     }
 }

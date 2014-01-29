@@ -46,22 +46,26 @@
             // 
             // echo
             // 
-            this.echo.Location = new System.Drawing.Point(3, 106);
+            this.echo.Enabled = false;
+            this.echo.Location = new System.Drawing.Point(3, 113);
             this.echo.Name = "echo";
             this.echo.Size = new System.Drawing.Size(75, 23);
             this.echo.TabIndex = 0;
             this.echo.Text = "echoSCP";
             this.echo.UseVisualStyleBackColor = true;
+            this.echo.Visible = false;
             this.echo.Click += new System.EventHandler(this.echo_Click);
             // 
             // send
             // 
-            this.send.Location = new System.Drawing.Point(143, 106);
+            this.send.Enabled = false;
+            this.send.Location = new System.Drawing.Point(143, 113);
             this.send.Name = "send";
             this.send.Size = new System.Drawing.Size(75, 23);
             this.send.TabIndex = 1;
             this.send.Text = "sendSCP";
             this.send.UseVisualStyleBackColor = true;
+            this.send.Visible = false;
             this.send.Click += new System.EventHandler(this.send_Click);
             // 
             // selectFileDialog
@@ -74,16 +78,17 @@
             // 
             // hostName
             // 
-            this.hostName.Location = new System.Drawing.Point(143, 55);
+            this.hostName.Location = new System.Drawing.Point(143, 57);
             this.hostName.Name = "hostName";
             this.hostName.Size = new System.Drawing.Size(173, 20);
             this.hostName.TabIndex = 3;
+            this.hostName.TextChanged += new System.EventHandler(this.hostName_TextChanged);
             // 
             // selectFileButton
             // 
             this.selectFileButton.Location = new System.Drawing.Point(3, 31);
             this.selectFileButton.Name = "selectFileButton";
-            this.selectFileButton.Size = new System.Drawing.Size(75, 18);
+            this.selectFileButton.Size = new System.Drawing.Size(75, 20);
             this.selectFileButton.TabIndex = 4;
             this.selectFileButton.Text = "Select File";
             this.selectFileButton.UseVisualStyleBackColor = true;
@@ -92,7 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 52);
+            this.label1.Location = new System.Drawing.Point(3, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 5;
@@ -100,15 +105,16 @@
             // 
             // portNumber
             // 
-            this.portNumber.Location = new System.Drawing.Point(143, 79);
+            this.portNumber.Location = new System.Drawing.Point(143, 85);
             this.portNumber.Name = "portNumber";
             this.portNumber.Size = new System.Drawing.Size(173, 20);
             this.portNumber.TabIndex = 6;
+            this.portNumber.TextChanged += new System.EventHandler(this.portNumber_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 76);
+            this.label2.Location = new System.Drawing.Point(3, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 7;
@@ -128,16 +134,16 @@
             this.tableLayoutPanel1.Controls.Add(this.hostName, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.binariesPathButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.binariesPath, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.27586F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.72414F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(458, 142);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
@@ -157,7 +163,7 @@
             this.binariesPath.Name = "binariesPath";
             this.binariesPath.Size = new System.Drawing.Size(302, 20);
             this.binariesPath.TabIndex = 9;
-            this.binariesPath.Text = "Select path for DCMTK Binaries";
+            this.binariesPath.TextChanged += new System.EventHandler(this.binariesPath_TextChanged);
             // 
             // outputWindow
             // 
