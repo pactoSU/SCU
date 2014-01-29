@@ -55,7 +55,11 @@ namespace SCU
         {
             string echoExe = "echoscu.exe";
             string filePath = binariesPath.Text + "\\" +echoExe;
-            string parameters = hostName.Text + " " + portNumber.Text;
+            string parameters = " ";
+            if (verboseToggle.Checked){
+                parameters += " -v ";
+            }    
+            parameters += hostName.Text + " " + portNumber.Text;
 
             MessageBox.Show(filePath + parameters);
             var echoProcess = new Process
@@ -91,8 +95,12 @@ namespace SCU
         {
             string sendExe = "storescu.exe";
             string filePath = binariesPath.Text + "\\" +sendExe;
-            string parameters = hostName.Text + " " + portNumber.Text + " " + selectFileDialog.Text;
-
+            string parameters = " ";
+            if (verboseToggle.Checked){
+                parameters += " -v ";
+            }
+            parameters += hostName.Text + " " + portNumber.Text + " " + selectFileDialog.Text;
+            
             MessageBox.Show(filePath + parameters);
             var echoProcess = new Process
             {
