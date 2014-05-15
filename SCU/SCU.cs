@@ -22,13 +22,22 @@ namespace SCU
         private void selectFileButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.InitialDirectory = "c:\\";
+
+            if (selectFileDialog.Text != null)
+            {
+                openFileDialog1.InitialDirectory = selectFileDialog.Text;
+            }
+            else
+            {
+                openFileDialog1.InitialDirectory = "c:\\";
+            }
             openFileDialog1.Filter = "All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+
                 try
                 {
                     string filePath = openFileDialog1.FileName;
@@ -39,6 +48,8 @@ namespace SCU
                 {
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
+
+
             }
         }
 
@@ -57,7 +68,7 @@ namespace SCU
             }    
             parameters += hostName.Text + " " + portNumber.Text;
 
-            MessageBox.Show(filePath + parameters);
+            //MessageBox.Show(filePath + parameters);
             var echoProcess = new Process
             {
                 StartInfo = new ProcessStartInfo
@@ -76,7 +87,7 @@ namespace SCU
                 while (!echoProcess.StandardOutput.EndOfStream)
                 {
                     string line = echoProcess.StandardOutput.ReadLine();
-                    outputWindow.Text += line + Environment.NewLine;
+                    outputWindow.AppendText(line + Environment.NewLine);
                 }
             }
             catch(Exception ex)
@@ -97,7 +108,7 @@ namespace SCU
             }
             parameters += hostName.Text + " " + portNumber.Text + " " + selectFileDialog.Text;
             
-            MessageBox.Show(filePath + parameters);
+            //MessageBox.Show(filePath + parameters);
             var echoProcess = new Process
             {
                 StartInfo = new ProcessStartInfo
@@ -116,7 +127,7 @@ namespace SCU
                 while (!echoProcess.StandardOutput.EndOfStream)
                 {
                     string line = echoProcess.StandardOutput.ReadLine();
-                    outputWindow.Text += line + Environment.NewLine;
+                    outputWindow.AppendText(line + Environment.NewLine);
                 }
             }
             catch(Exception ex)
@@ -162,16 +173,13 @@ namespace SCU
             if (fileSelected && hostNameInputted && portNumberInputted){
 
                 echo.Enabled = true;
-                echo.Visible = true;
                 send.Enabled = true;
-                send.Visible = true;
+
             }
             else
             {
                 echo.Enabled = false;
-                echo.Visible = false;
                 send.Enabled = false;
-                send.Visible = false;
 
             }   
         }
@@ -201,16 +209,12 @@ namespace SCU
             {
 
                 echo.Enabled = true;
-                echo.Visible = true;
                 send.Enabled = true;
-                send.Visible = true;
             }
             else
             {
                 echo.Enabled = false;
-                echo.Visible = false;
                 send.Enabled = false;
-                send.Visible = false;
 
             } 
         }
@@ -238,16 +242,12 @@ namespace SCU
             {
 
                 echo.Enabled = true;
-                echo.Visible = true;
                 send.Enabled = true;
-                send.Visible = true;
             }
             else
             {
                 echo.Enabled = false;
-                echo.Visible = false;
                 send.Enabled = false;
-                send.Visible = false;
 
             } 
         }
@@ -274,16 +274,12 @@ namespace SCU
             if (fileSelected && hostNameInputted && binariesPathSelected)
             {
                 echo.Enabled = true;
-                echo.Visible = true;
                 send.Enabled = true;
-                send.Visible = true;
             }
             else
             {
                 echo.Enabled = false;
-                echo.Visible = false;
                 send.Enabled = false;
-                send.Visible = false;
 
             }
         }

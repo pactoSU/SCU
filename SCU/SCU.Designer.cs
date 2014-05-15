@@ -53,7 +53,6 @@
             this.echo.TabIndex = 0;
             this.echo.Text = "echoSCP";
             this.echo.UseVisualStyleBackColor = true;
-            this.echo.Visible = false;
             this.echo.Click += new System.EventHandler(this.echo_Click);
             // 
             // send
@@ -65,7 +64,6 @@
             this.send.TabIndex = 1;
             this.send.Text = "sendSCP";
             this.send.UseVisualStyleBackColor = true;
-            this.send.Visible = false;
             this.send.Click += new System.EventHandler(this.send_Click);
             // 
             // selectFileDialog
@@ -167,6 +165,9 @@
             // 
             // outputWindow
             // 
+            this.outputWindow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.outputWindow.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.outputWindow.Location = new System.Drawing.Point(6, 214);
             this.outputWindow.Multiline = true;
@@ -174,6 +175,7 @@
             this.outputWindow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.outputWindow.Size = new System.Drawing.Size(445, 233);
             this.outputWindow.TabIndex = 9;
+            this.outputWindow.UseWaitCursor = true;
             // 
             // verboseToggle
             // 
