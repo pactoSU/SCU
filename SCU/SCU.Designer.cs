@@ -175,11 +175,13 @@
             this.outputWindow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.outputWindow.Size = new System.Drawing.Size(445, 233);
             this.outputWindow.TabIndex = 9;
-            this.outputWindow.UseWaitCursor = true;
+            this.outputWindow.UseWaitCursor = false;
             // 
             // verboseToggle
             // 
             this.verboseToggle.AutoSize = true;
+            this.verboseToggle.Checked = true;
+            this.verboseToggle.CheckState = System.Windows.Forms.CheckState.Checked;
             this.verboseToggle.Location = new System.Drawing.Point(3, 152);
             this.verboseToggle.Name = "verboseToggle";
             this.verboseToggle.Size = new System.Drawing.Size(95, 17);
@@ -196,8 +198,7 @@
             this.Controls.Add(this.outputWindow);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SCU";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Simulated Ultrasound";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
